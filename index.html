@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바이브 코딩 - AI와 함께하는 새로운 개발 경험</title>
+    <meta name="description" content="코딩의 새로운 패러다임, 바이브 코딩! AI와 자연어로 소통하며 빠르고 효율적으로 개발하는 방법을 알아보세요.">
+    <meta name="keywords" content="바이브코딩, AI코딩, Cursor, Bolt.new, Replit, 자동코딩, 프로그래밍">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>💻 바이브 코딩</h1>
+                <span>AI Coding Revolution</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">특징</a>
+                <a href="#tools">도구</a>
+                <a href="#examples">예시</a>
+                <a href="#getting-started">시작하기</a>
+                <a href="#community">커뮤니티</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    🤖 코딩의 새로운 패러다임<br>
+                    <span class="gradient-text">바이브 코딩</span>
+                </h1>
+                <p class="hero-subtitle">
+                    복잡한 문법은 이제 그만! AI와 자연어로 소통하며<br>
+                    <strong>상상을 현실로 만드는 마법같은 개발 경험</strong>을 시작하세요
+                </p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>10배 빠른 개발</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🧠</span>
+                        <span>AI 어시스턴트</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🌐</span>
+                        <span>모든 언어 지원</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('getting-started')">
+                        🚀 지금 시작하기
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('demo')">
+                        📺 데모 보기
+                    </button>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <div class="editor-tabs">
+                            <div class="tab active">main.py</div>
+                            <div class="tab">styles.css</div>
+                            <div class="tab">index.html</div>
+                        </div>
+                        <div class="editor-actions">
+                            <span class="ai-indicator">🤖 AI 활성</span>
+                        </div>
+                    </div>
+                    <div class="editor-content">
+                        <div class="code-line">
+                            <span class="comment"># 바이브 코딩으로 웹 크롤러 만들기</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="keyword">def</span> <span class="function">create_web_scraper</span>():
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"네이버 뉴스를 크롤링하는 함수 만들어줘"</span>
+                        </div>
+                        <div class="code-line">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># AI가 자동으로 완성...</span>
+                        </div>
+                        <div class="typing-cursor">|</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 바이브 코딩이란? 섹션 -->
+    <section class="what-is-section">
+        <div class="container">
+            <h2>🤔 바이브 코딩이 뭔가요?</h2>
+            <div class="explanation-grid">
+                <div class="explanation-card">
+                    <div class="card-icon">🗣️</div>
+                    <h3>자연어 프로그래밍</h3>
+                    <p>복잡한 코드 대신 일상 언어로 원하는 기능을 설명하면 AI가 완벽한 코드를 생성합니다.</p>
+                </div>
+                <div class="explanation-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>AI 협업</h3>
+                    <p>AI가 당신의 페어 프로그래밍 파트너가 되어 실시간으로 도움을 제공합니다.</p>
+                </div>
+                <div class="explanation-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>의도 기반 개발</h3>
+                    <p>문법보다는 '무엇을' 만들고 싶은지에 집중하여 창의성을 최대화합니다.</p>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h3>🔴 기존 코딩</h3>
+                    <div class="comparison-content old">
+                        <div class="code-block">
+                            <pre><code>import requests
+from bs4 import BeautifulSoup
+import json
+
+def scrape_news():
+    url = "https://news.naver.com"
+    headers = {
+                    'User-Agent': 'Mozilla/5.0...'
+    }
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    articles = []
+    for article in soup.find_all('div', class_='news_item'):
+        title = article.find('a').text.strip()
+        link = article.find('a')['href']
+        articles.append({'title': title, 'link': link})
+    
+    return articles</code></pre>
+                        </div>
+                        <p>❌ 복잡한 문법과 라이브러리 학습 필요<br>
+                        ❌ 시행착오 반복<br>
+                        ❌ 디버깅에 많은 시간 소요</p>
+                    </div>
+                </div>
+                
+                <div class="comparison-arrow">➡️</div>
+                
+                <div class="comparison-item">
+                    <h3>🟢 바이브 코딩</h3>
+                    <div class="comparison-content new">
+                        <div class="chat-bubble">
+                            <div class="user-message">
+                                "네이버 뉴스 사이트에서 제목과 링크를 크롤링하는 파이썬 함수 만들어줘"
+                            </div>
+                            <div class="ai-message">
+                                <span class="ai-icon">🤖</span>
+                                "네이버 뉴스 크롤러를 만들어드릴게요! 먼저 필요한 라이브러리를 설치하고..."
+                            </div>
+                        </div>
+                        <p>✅ 자연어로 간단히 요청<br>
+                        ✅ AI가 즉시 완벽한 코드 생성<br>
+                        ✅ 설명과 함께 최적화된 솔루션 제공</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 특징 섹션 -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>✨ 바이브 코딩의 강력한 특징</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>개발 속도 10배 향상</h3>
+                    <p>AI가 코드를 자동으로 생성하고 최적화하여 개발 시간을 획기적으로 단축합니다.</p>
+                    <ul>
+                        <li>✅ 보일러플레이트 코드 자동 생성</li>
+                        <li>✅ 실시간 코드 완성</li>
+                        <li>✅ 스마트 리팩토링</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>지능적인 코드 분석</h3>
+                    <p>AI가 코드의 의도를 파악하고 개선점을 제안하며 버그를 미리 예방합니다.</p>
+                    <ul>
+                        <li>✅ 실시간 버그 탐지</li>
+                        <li>✅ 성능 최적화 제안</li>
+                        <li>✅ 보안 취약점 분석</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>다국어 & 멀티 플랫폼</h3>
+                    <p>어떤 프로그래밍 언어든 자연어로 설명하면 AI가 해당 언어로 코드를 생성합니다.</p>
+                    <ul>
+                        <li>✅ Python, JavaScript, Java, C++ 등</li>
+                        <li>✅ 웹, 모바일, 데스크톱 앱</li>
+                        <li>✅ 프레임워크 자동 선택</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>학습 곡선 제거</h3>
+                    <p>복잡한 문법이나 라이브러리를 외울 필요 없이 아이디어만으로 개발할 수 있습니다.</p>
+                    <ul>
+                        <li>✅ 초보자도 전문가 수준 코드 생성</li>
+                        <li>✅ 문서화와 주석 자동 생성</li>
+                        <li>✅ 코드 설명과 학습 자료 제공</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI 코딩 도구들 섹션 -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2>🛠️ 인기 바이브 코딩 도구들</h2>
+            <div class="tools-grid">
+                <div class="tool-card featured">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%232563eb'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5z'/%3E%3Cpath d='m2 17 10 5 10-5'/%3E%3Cpath d='m2 12 10 5 10-5'/%3E%3C/svg%3E" alt="Cursor" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>Cursor</h3>
+                            <span class="tool-badge">인기 1위</span>
+                        </div>
+                    </div>
+                    <p>VS Code 기반의 최고의 AI 코딩 에디터. 강력한 코드 생성과 채팅 기능을 제공합니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Chat with AI</span>
+                        <span class="feature-tag">Code Generation</span>
+                        <span class="feature-tag">VS Code Compatible</span>
+                    </div>
+                    <a href="https://cursor.sh" class="tool-link" target="_blank">
+                        🔗 cursor.sh
+                    </a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23f59e0b'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E" alt="Bolt" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>Bolt.new</h3>
+                            <span class="tool-badge">웹 개발</span>
+                        </div>
+                    </div>
+                    <p>브라우저에서 바로 풀스택 웹 앱을 만들 수 있는 AI 개발 환경입니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">No Installation</span>
+                        <span class="feature-tag">Full Stack</span>
+                        <span class="feature-tag">Real-time Preview</span>
+                    </div>
+                    <a href="https://bolt.new" class="tool-link" target="_blank">
+                        🔗 bolt.new
+                    </a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3Cpath d='M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z'/%3E%3Cpath d='M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0'/%3E%3Cpath d='M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5'/%3E%3C/svg%3E" alt="Replit" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>Replit Agent</h3>
+                            <span class="tool-badge">클라우드</span>
+                        </div>
+                    </div>
+                    <p>클라우드 기반 개발 환경에서 AI와 함께 협업하며 앱을 만들 수 있습니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Cloud IDE</span>
+                        <span class="feature-tag">Multiplayer</span>
+                        <span class="feature-tag">Instant Deploy</span>
+                    </div>
+                    <a href="https://replit.com" class="tool-link" target="_blank">
+                        🔗 replit.com
+                    </a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%238b5cf6'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E" alt="GitHub Copilot" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>GitHub Copilot</h3>
+                            <span class="tool-badge">AI 어시스턴트</span>
+                        </div>
+                    </div>
+                    <p>GitHub과 OpenAI가 만든 AI 코딩 어시스턴트로 모든 에디터에서 사용 가능합니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">AI Suggestions</span>
+                        <span class="feature-tag">Multi-language</span>
+                        <span class="feature-tag">IDE Integration</span>
+                    </div>
+                    <a href="https://github.com/features/copilot" class="tool-link" target="_blank">
+                        🔗 GitHub Copilot
+                    </a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ef4444'%3E%3Cpath d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z'/%3E%3Cpath d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z'/%3E%3Cpath d='M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0'/%3E%3Cpath d='M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5'/%3E%3C/svg%3E" alt="v0" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>v0 by Vercel</h3>
+                            <span class="tool-badge">UI 생성</span>
+                        </div>
+                    </div>
+                    <p>텍스트 설명만으로 React 컴포넌트와 UI를 자동으로 생성하는 AI 도구입니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">React/Next.js</span>
+                        <span class="feature-tag">UI Components</span>
+                        <span class="feature-tag">Tailwind CSS</span>
+                    </div>
+                    <a href="https://v0.dev" class="tool-link" target="_blank">
+                        🔗 v0.dev
+                    </a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%2306b6d4'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" alt="Claude" class="tool-icon">
+                        <div class="tool-info">
+                            <h3>Claude Artifacts</h3>
+                            <span class="tool-badge">AI 채팅</span>
+                        </div>
+                    </div>
+                    <p>Anthropic의 Claude AI로 대화하며 코드, 웹페이지, 문서를 실시간으로 생성합니다.</p>
+                    <div class="tool-features">
+                        <span class="feature-tag">Interactive Chat</span>
+                        <span class="feature-tag">Live Preview</span>
+                        <span class="feature-tag">Multi-format</span>
+                    </div>
+                    <a href="https://claude.ai" class="tool-link" target="_blank">
+                        🔗 claude.ai
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 실제 예시 섹션 -->
+    <section id="examples" class="examples-section">
+        <div class="container">
+            <h2>🎯 실제 바이브 코딩 예시</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>📱 투두 앱 만들기</h3>
+                        <span class="time-badge">⏱️ 5분 완성</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="user-input">
+                            <div class="input-header">👤 개발자 요청</div>
+                            <p>"React로 할 일 추가, 삭제, 완료 체크가 가능한 투두 앱을 만들어줘. 깔끔한 디자인으로 부탁해."</p>
+                        </div>
+                        <div class="ai-output">
+                            <div class="output-header">🤖 AI 응답 및 결과</div>
+                            <div class="generated-result">
+                                <div class="mini-app">
+                                    <div class="app-header">✅ 투두 앱</div>
+                                    <div class="todo-input">
+                                        <input type="text" placeholder="할 일을 입력하세요...">
+                                        <button>추가</button>
+                                    </div>
+                                    <div class="todo-list">
+                                        <div class="todo-item">
+                                            <input type="checkbox"> 바이브 코딩 연습하기
+                                        </div>
+                                        <div class="todo-item completed">
+                                            <input type="checkbox" checked> AI 도구 탐험하기
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>📊 데이터 시각화</h3>
+                        <span class="time-badge">⏱️ 3분 완성</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="user-input">
+                            <div class="input-header">👤 개발자 요청</div>
+                            <p>"CSV 파일을 읽어서 매출 데이터를 차트로 보여주는 Python 스크립트 만들어줘."</p>
+                        </div>
+                        <div class="ai-output">
+                            <div class="output-header">🤖 AI 응답 및 결과</div>
+                            <div class="generated-result">
+                                <div class="chart-demo">
+                                    <div class="chart-title">📈 월별 매출 현황</div>
+                                    <div class="chart-bars">
+                                        <div class="bar" style="height: 60%">
+                                            <span class="bar-value">60만</span>
+                                            <span class="bar-label">1월</span>
+                                        </div>
+                                        <div class="bar" style="height: 80%">
+                                            <span class="bar-value">80만</span>
+                                            <span class="bar-label">2월</span>
+                                        </div>
+                                        <div class="bar" style="height: 100%">
+                                            <span class="bar-value">100만</span>
+                                            <span class="bar-label">3월</span>
+                                        </div>
+                                        <div class="bar" style="height: 75%">
+                                            <span class="bar-value">75만</span>
+                                            <span class="bar-label">4월</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-header">
+                        <h3>🌐 API 연동</h3>
+                        <span class="time-badge">⏱️ 2분 완성</span>
+                    </div>
+                    <div class="example-content">
+                        <div class="user-input">
+                            <div class="input-header">👤 개발자 요청</div>
+                            <p>"OpenWeather API를 사용해서 서울 날씨를 가져와서 예쁘게 표시하는 웹페이지 만들어줘."</p>
+                        </div>
+                        <div class="ai-output">
+                            <div class="output-header">🤖 AI 응답 및 결과</div>
+                            <div class="generated-result">
+                                <div class="weather-card">
+                                    <div class="weather-header">🌤️ 서울 날씨</div>
+                                    <div class="weather-temp">22°C</div>
+                                    <div class="weather-desc">맑음</div>
+                                    <div class="weather-details">
+                                        <span>💧 습도 65%</span>
+                                        <span>💨 바람 5km/h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시작하기 섹션 -->
+    <section id="getting-started" class="getting-started-section">
+        <div class="container">
+            <h2>🚀 바이브 코딩 시작하기</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>🛠️ 도구 선택</h3>
+                        <p>용도에 맞는 AI 코딩 도구를 선택하세요</p>
+                        <div class="step-options">
+                            <div class="option">
+                                <strong>초보자:</strong> Cursor, Bolt.new
+                            </div>
+                            <div class="option">
+                                <strong>웹 개발:</strong> v0, Bolt.new
+                            </div>
+                            <div class="option">
+                                <strong>전문가:</strong> GitHub Copilot, Claude
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>💬 자연어로 요청</h3>
+                        <p>원하는 기능을 일상 언어로 명확하게 설명하세요</p>
+                        <div class="step-tips">
+                            <div class="tip">✅ 구체적으로: "로그인 기능이 있는 블로그"</div>
+                            <div class="tip">✅ 기술 스택 명시: "React와 Firebase로"</div>
+                            <div class="tip">✅ 디자인 요구: "모던하고 반응형으로"</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>🤖 AI와 협업</h3>
+                        <p>AI가 생성한 코드를 검토하고 피드백을 제공하세요</p>
+                        <div class="step-tips">
+                            <div class="tip">💡 "이 부분을 더 간단하게 만들어줘"</div>
+                            <div class="tip">💡 "에러 처리를 추가해줘"</div>
+                            <div class="tip">💡 "주석도 함께 달아줘"</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>🎯 반복 개선</h3>
+                        <p>AI와 대화하며 코드를 지속적으로 개선하세요</p>
+                        <div class="step-benefits">
+                            <div class="benefit">🚀 빠른 프로토타이핑</div>
+                            <div class="benefit">🔍 코드 리뷰 자동화</div>
+                            <div class="benefit">📚 실시간 학습</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-start">
+                <h3>⚡ 지금 바로 체험해보세요!</h3>
+                <div class="quick-start-buttons">
+                    <a href="https://cursor.sh" target="_blank" class="start-button cursor">
+                        <span class="button-icon">💻</span>
+                        <span class="button-text">Cursor 다운로드</span>
+                    </a>
+                    <a href="https://bolt.new" target="_blank" class="start-button bolt">
+                        <span class="button-icon">⚡</span>
+                        <span class="button-text">Bolt.new 체험</span>
+                    </a>
+                    <a href="https://claude.ai" target="_blank" class="start-button claude">
+                        <span class="button-icon">🤖</span>
+                        <span class="button-text">Claude 채팅</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 커뮤니티 섹션 -->
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2>🌟 바이브 코딩 커뮤니티</h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-icon">💬</div>
+                    <h3>Discord 채널</h3>
+                    <p>실시간으로 다른 개발자들과 바이브 코딩 경험을 공유하고 도움을 주고받으세요.</p>
+                    <a href="#" class="community-link">참여하기 →</a>
+                </div>
+                
+                <div class="community-card">
+                    <div class="community-icon">📺</div>
+                    <h3>YouTube 채널</h3>
+                    <p>바이브 코딩 튜토리얼과 실제 프로젝트 구현 과정을 영상으로 확인하세요.</p>
+                    <a href="#" class="community-link">구독하기 →</a>
+                </div>
+                
+                <div class="community-card">
+                    <div class="community-icon">📚</div>
+                    <h3>GitHub 저장소</h3>
+                    <p>바이브 코딩으로 만든 프로젝트 예시와 템플릿을 자유롭게 활용하세요.</p>
+                    <a href="#" class="community-link">둘러보기 →</a>
+                </div>
+                
+                <div class="community-card">
+                    <div class="community-icon">📝</div>
+                    <h3>블로그</h3>
+                    <p>최신 AI 코딩 트렌드와 팁, 성공 사례를 정기적으로 업데이트합니다.</p>
+                    <a href="#" class="community-link">읽어보기 →</a>
+                </div>
+            </div>
+            
+            <div class="newsletter">
+                <h3>📧 주간 뉴스레터 구독</h3>
+                <p>매주 최신 바이브 코딩 소식과 팁을 이메일로 받아보세요</p>
+                <form class="newsletter-form" data-type="email">
+                    <input type="email" placeholder="이메일 주소를 입력하세요" required>
+                    <button type="submit">구독하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 데모 영상 섹션 -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2>📺 바이브 코딩 실전 데모</h2>
+            <div class="demo-video">
+                <div class="video-placeholder">
+                    <div class="play-button">▶️</div>
+                    <p>Cursor로 30분 만에 풀스택 앱 만들기</p>
+                </div>
+            </div>
+            
+            <div class="demo-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-time">0:00</div>
+                    <div class="highlight-desc">프로젝트 아이디어 설명</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-time">2:30</div>
+                    <div class="highlight-desc">AI와 자연어로 백엔드 구조 설계</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-time">8:45</div>
+                    <div class="highlight-desc">프론트엔드 UI 자동 생성</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-time">15:20</div>
+                    <div class="highlight-desc">API 연동 및 데이터베이스 설정</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-time">25:10</div>
+                    <div class="highlight-desc">배포 및 테스트 완료</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>🚀 지금 바로 바이브 코딩을 시작하세요!</h2>
+                <p>복잡한 코딩은 AI에게 맡기고, 당신은 창의적인 아이디어에만 집중하세요.<br>
+                미래의 개발 방식을 오늘부터 경험해보세요!</p>
+                
+                <div class="cta-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100만+</span>
+                        <span class="stat-label">개발자들이 사용</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10배</span>
+                        <span class="stat-label">빠른 개발 속도</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">만족도</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="btn-primary mega" onclick="window.open('https://cursor.sh', '_blank')">
+                        💻 Cursor 다운로드
+                    </button>
+                    <button class="btn-secondary mega" onclick="scrollToSection('tools')">
+                        🛠️ 도구 둘러보기
+                    </button>
+                </div>
+                
+                <div class="social-proof">
+                    <p>⭐⭐⭐⭐⭐ "코딩이 이렇게 쉬워도 되나요?" - 신입 개발자 김OO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>💻 바이브 코딩</h3>
+                    <p>AI와 함께하는 새로운 개발 경험</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📺 YouTube</a>
+                        <a href="#" class="social-link">💬 Discord</a>
+                        <a href="#" class="social-link">📘 GitHub</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>도구</h4>
+                        <a href="https://cursor.sh" target="_blank">Cursor</a>
+                        <a href="https://bolt.new" target="_blank">Bolt.new</a>
+                        <a href="https://replit.com" target="_blank">Replit</a>
+                        <a href="https://v0.dev" target="_blank">v0 by Vercel</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>학습</h4>
+                        <a href="#examples">실전 예시</a>
+                        <a href="#getting-started">시작 가이드</a>
+                        <a href="#">튜토리얼</a>
+                        <a href="#">블로그</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>커뮤니티</h4>
+                        <a href="#">Discord</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">뉴스레터</a>
+                        <a href="#">이벤트</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 바이브 코딩. 모든 권리 보유.</p>
+                <p>AI와 함께 만드는 더 나은 개발 세상 🌟</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
